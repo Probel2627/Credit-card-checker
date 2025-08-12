@@ -42,12 +42,12 @@ const validateCred = arr => {
 //Checker for nested array 
 const findInvalidCards = arr => {
     let newArray = [];
-    for (i = 0; i < batch.length; i++) {
-        const save = validateCred(batch[i]);
+    for (let i = 0; i < arr.length; i++) {
+        const save = validateCred(arr[i]);
         if (save === true) {
             continue;
         } else if (save === false) {
-            newArray.push(batch[i]);
+            newArray.push(arr[i]);
         } else {
             console.log("Error in find invalid cards")
         }
